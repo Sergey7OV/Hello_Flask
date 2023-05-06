@@ -9,6 +9,7 @@ def prediction(params):
     pred = model.predict([params])
     return pred
 
+
 @app.route('/', methods=['POST', 'GET'])
 def predict():
     message = ''
@@ -24,7 +25,7 @@ def predict():
         params = [float(i.replace(',', '.')) for i in params]
 
         message = f'Соотношение матрица-наполнитель: {prediction(params)}'
-    return render_template('mn.html', message=message)
+    return render_template('main.html', message=message)
 
 if __name__ == '__main__':
     app.run()
