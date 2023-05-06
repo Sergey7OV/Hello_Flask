@@ -5,7 +5,7 @@ import tensorflow as tf
 app = Flask(__name__)
 
 def prediction(params):
-    model = tf.keras.models.load_model('model_nero')
+    model = tf.keras.models.load_model('model')
     pred = model.predict([params])
     return pred
 
