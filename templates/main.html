@@ -7,6 +7,11 @@
 <body>
     <h1 style="color:#000000; font-family: tahoma;">Рекомендации соотношения матрица-наполнитель 
 <br>для композиционных материалов</h1>
+    <p>
+    {% if message %}
+        <p><b><label style="color:#000000; font-family: tahoma; font-size: 7">{{message}}</b></p>
+    {% endif %}
+    </p>
     <form action="" method="post">
     <fieldset>
     <strong><u> <legend style="color:#0047ab; font-family: tahoma; font-size: 7">Введите параметры</legend> </u></strong>
@@ -55,10 +60,5 @@
         <input style="color:#000000; font-family: tahoma; font-size: 7" type="reset">
 	</p>
     </form>
-    <p>
-    {% if message %}
-        <p><b><label style="color:#000000; font-family: tahoma; font-size: 7">{{message}}</b></p>
-    {% endif %}
-    </p>
 </body>
 </html>
